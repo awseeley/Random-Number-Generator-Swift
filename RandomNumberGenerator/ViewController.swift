@@ -27,19 +27,19 @@ class ViewController: UIViewController {
         print(randCGFloat)
     }
     
-    func randomInt(min: Int, max: Int) -> Int {
+    func randomInt(_ min: Int, max: Int) -> Int {
         return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     }
 
-    func randomDouble(min: Double, max: Double) -> Double {
+    func randomDouble(_ min: Double, max: Double) -> Double {
         return (Double(arc4random()) / 0xFFFFFFFF) * (max - min) + min
     }
     
-    func randomFloat(min: Float, max: Float) -> Float {
+    func randomFloat(_ min: Float, max: Float) -> Float {
         return (Float(arc4random()) / 0xFFFFFFFF) * (max - min) + min
     }
     
-    func randomCGFloat(min: CGFloat, max: CGFloat) -> CGFloat {
+    func randomCGFloat(_ min: CGFloat, max: CGFloat) -> CGFloat {
         return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * (max - min) + min
     }
     
